@@ -1,0 +1,303 @@
+{% extends "layout.html" %}
+{% set active = "components" %}
+{% set activesub = "side" %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "back-link/macro.njk" import govukBackLink %}
+{% from "footer/macro.njk" import govukFooter %}
+
+{% block pageTitle %}
+Apply for legal aid - Check client financial assessment
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBackLink({
+    text: "Back",
+      href: "applicant_type"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="app-pane__content">
+  <main class="app-content" id="main-content">
+
+    <div class="app-prose-scope">
+
+      <span class="govuk-caption-xl">Components</span>
+      <h1 class="heading-section">Side tab</h1>
+      <p class="govuk-body-l">Switching between views of grouped content; hiding content that doesn&rsquo;t always need to be visible.</p>
+
+      <div class="example example-images">
+        <div class="govuk-grid-row">
+          {% include "includes/components/side-tab.html" %}
+        </div>
+      </div>
+      <details class="code-details">
+        <summary>HTML</summary>
+        <pre><code class="html">{% filter escape %}{% include "includes/components/side-tab.html" %}{% endfilter %}</code></pre>
+      </details>
+      <details class="code-details">
+        <summary>CSS</summary>
+        <pre><code class="css">{% filter escape %}{% include "includes/css/tab.scss" %}{% endfilter %}</code></pre>
+      </details>
+      <details class="code-details details-margin-btm">
+        <summary>JavaScript</summary>
+        <pre><code class="javascript">{% filter escape %}{% include "includes/css/tab.js" %}{% endfilter %}</code></pre>
+      </details>
+
+      <h2 class="govuk-heading-m">Interaction principles</h2>
+      <p>Only one tab can be active at a time.</p>
+      <p>The active tab should be distinguishable from the inactive, with maximum contrast ratio.</p>
+      <p>Inactive tabs should have a hover state that is distinguisable with minimum contrast ratio.</p>
+      <p>Focused tabs should be consistent with other focus states and distinguisable from active, inactive and hover states.</p>
+      <p><a href="https://inclusive-components.design/tabbed-interfaces/">Inclusive components</a> has some really good guidance on tabs if you want to read more.</p>
+
+      <h2 class="govuk-heading-m">Content principles</h2>
+      <p>The label should reflect the thing you need do with the content of that tab, not a description of what it is.</p>
+
+      <h2 class="govuk-heading-m">Accessibility principles</h2>
+      <p>The active tab should be labelled as active in the code.</p>
+      <p>Only active tab content should be readable.</p>
+
+      <h2 class="govuk-heading-m">User research</h2>
+      <p>Application platform uses vertical tabs for long lists. When combined with a typeahead search, the pattern performs very well when users don't know the contents of the list.</p>
+
+      <h2 class="govuk-heading-m">Services using this pattern</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Application platform</li>
+      </ul>
+
+      <div class="contact-us">
+        <h2 class="govuk-heading-m">Get in touch</h2>
+        <p>If you’ve got a question or suggestion share it on Slack <a href="slack://channel?id=C0FR8PE8Z&team=T03TJ3P61">#interaction-designers channel</a> or on <a href="https://github.com/UKHomeOffice/home-office-digital-patterns/issues/97">GitHub</a>.</p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+          Review your client's financial self-assessment
+        </h1>
+
+
+        <p>Client: <strong>Firstname Lastname</strong>
+          <br>Case reference: <strong>2018/LAA/4ewrqfdd</strong>
+            <br>Solicitor: <strong>Hitchcock, King & James</strong></p>
+
+
+<p class="govuk-body">Your client has completed their financial assessment. You can review their answers below and make corrections before their application is submitted.</p>
+
+          <h2 class="govuk-heading-l">Income</h2>
+
+          <div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Total gross wage
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <table class="govuk-table" style="
+              margin-bottom: 10px;
+              padding-bottom: 0px">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header govuk-!-width-one-third" scope="col">Description</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Date</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Cash in HSBC 17Oct</td>
+                    <td class="govuk-table__cell">17 OCT 2017</td>
+                    <td class="govuk-table__cell">£250.00</td>
+                  </tr>
+               </tbody>
+              </table>
+                </div>
+                </div>
+
+
+          <table class="govuk-table" style="
+          margin-bottom: 10px;
+          padding-bottom: 0px">
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <div class="govuk-accordion" data-module="accordion" id="accordion-default">
+                    <div class="govuk-accordion__section ">
+                      <div class="govuk-accordion__section-heading">
+                        <th class="govuk-table__header" scope="row">
+                          <span class="govuk-accordion__section-button" id="govuk-table__header-1">Total gross wage</span>
+                        </th>
+                </div>
+              </div>
+            </div>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">£535.72</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Total state benefits</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£745.00</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Gross income</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£1,280.72</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Gross income limit</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£2,657.00</td>
+                  </tr>
+                </tbody>
+              </table>
+
+                <p><a href="incoming_transactions_list_v2" style="float:right; padding-bottom: 30px;">View full list of incoming transactions</a></p>
+
+              <table class="govuk-table" style="
+                margin-bottom: 10px;
+                padding-bottom: 0px">
+                <h2 class="govuk-heading-l">Outgoings</h2>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Mortgage, rent or board</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£1048.50</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Total deductions</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£1048.50</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Total disposable income</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£232.22</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Disposable income limit</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£733.00</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p><a href="outgoing_transactions_list" style="float:right; padding-bottom: 30px;">View full list of outgoing transactions</a></p>
+
+              <table class="govuk-table">
+                <h2 class="govuk-heading-l">Capital</h2>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Bank accounts</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£470.00</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
+                      Change <span class="govuk-visually-hidden">blank</span>
+                    </a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">National Savings Certificates</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">None declared</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
+                      Change <span class="govuk-visually-hidden">blank</span>
+                    </a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Premium bonds</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">None declared</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
+                      Change <span class="govuk-visually-hidden">blank</span>
+                    </a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Stocks and shares</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">None declared</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
+                      Change <span class="govuk-visually-hidden">blank</span>
+                    </a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Other assets</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">None declared</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
+                      Change <span class="govuk-visually-hidden">blank</span>
+                    </a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Property</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">None declared</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
+                      Change <span class="govuk-visually-hidden">blank</span>
+                    </a></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Total capital</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£470.00</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">Total capital limit</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">£8,000.00</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+          <button type="submit" class="govuk-button">
+            Save and continue
+          </button>
+
+    </div>
+  </div>
+  </main>
+</div>
+
+  {% endblock %}
+
+  {% block footer %}
+  {{ govukFooter({
+  meta: {
+      items: [
+        {
+          href: "#",
+          text: "Help"
+        },
+        {
+          href: "https://www.gov.uk/help/cookies",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Contact"
+        },
+        {
+          href: "#",
+          text: "Feedback"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        },
+        {
+          href: "https://mojdigital.blog.gov.uk/",
+          text: "MOJ Digital Services"
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  }) }}
+  {% endblock %}
